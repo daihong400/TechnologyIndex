@@ -12,18 +12,42 @@
 
         </div>
         <div class="top-title">
-            <h2>XXXX   XXXX</h2>
+            <h2>XXXX XXXX</h2>
         </div>
 
         <div class="wrap-globe">
             <div class="globe-content">
-                <img src="./img/globe.png" alt="">
+                <!--<img src="./img/globe.png" alt="">-->
+                <div class="wrap-start" style="top:100px;left:200px;">
+                    <img src="./img/globe.png" alt="" style="width:50px;height:50px;">
+                </div>
             </div>
             <div class="globe-front">
-                <img src="./img/globe_front.png" alt="">
+                <!--<img src="./img/globe_front.png" alt="">-->
             </div>
         </div>
     </div>
 </div>
+<script src="./js/jquery.min.js"></script>
+<script>
+    function mouseMove(ev) {
+        Ev = ev || window.event;
+        var mousePos = mouseCoords(ev);
+        // console.log(mousePos.x+':'+mousePos.y)
+        $('.globe-front').css({'left': -54+mousePos.x/200+'px','top': -73+mousePos.y/200+'px'})
+    }
+    function mouseCoords(ev) {
+        if (ev.pageX || ev.pageY) {
+            return {x: ev.pageX, y: ev.pageY};
+        }
+        return {
+            x: ev.clientX + document.body.scrollLeft - document.body.clientLeft,
+            y: ev.clientY + document.body.scrollTop - document.body.clientTop
+        };
+    }
+    document.onmousemove = mouseMove;
+
+
+</script>
 </body>
 </html>

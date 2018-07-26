@@ -20,7 +20,7 @@ body,html {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(../img/bg_galaxy.jpg);
+    /*background-image: url(../img/bg_galaxy.jpg);*/
 }
 
 .wrap-logo {
@@ -63,8 +63,68 @@ body,html {
     position: absolute;
     top: -73px;
     left: -54px;
+    background-color: #ddd;
+    width: 600px;
+    height: 600px;
+}
+.globe-front.move-right-3 {
+    animation:moveRightThree ease-in 1s forwards; /* Safari and Chrome */
+    -webkit-animation:moveRightThree ease-in 1s forwards; /* Safari and Chrome */
 }
 .globe-front img {
     width: 697px;
     height: 697px;
 }
+.wrap-start {
+    position: absolute;
+    z-index: 10;
+}
+
+
+
+
+@keyframes moveRightThree {
+    0% {
+        left: -54px; /*初始状态 透明度为0*/
+    }
+    50% {
+        left: -60px; /*中间状态 透明度为0*/
+    }
+    100% {
+        left: -74px; /*结尾状态 透明度为1*/
+    }
+}
+@-webkit-keyframes moveRightThree { /* Safari 和 Chrome */
+    0% {
+        left: -54px; /*初始状态 透明度为0*/
+    }
+    50% {
+        left: -60px; /*中间状态 透明度为0*/
+    }
+    100% {
+        left: -74px; /*结尾状态 透明度为1*/
+    }
+}
+@-moz-keyframes moveRightThree { /* Firefox */
+    0% {
+        left: -54px; /*初始状态 透明度为0*/
+    }
+    50% {
+        left: -60px; /*中间状态 透明度为0*/
+    }
+    100% {
+        left: -74px; /*结尾状态 透明度为1*/
+    }
+}
+@-o-keyframes moveRightThree { /* Opera */
+    0% {
+        left: -54px; /*初始状态 透明度为0*/
+    }
+    50% {
+        left: -60px; /*中间状态 透明度为0*/
+    }
+    100% {
+        left: -74px; /*结尾状态 透明度为1*/
+    }
+}
+
